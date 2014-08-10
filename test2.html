@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <div id="player"></div>
+    <div id="ytplayer"></div>
+    <form>
+		<input id="playlistId" type="text">
+		<input id="submit" type="submit" value="Submit">
+	</form>
+  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <script>
+      
+var mixedTapeApp = {};
+mixedTapeApp.playerLoad = function(){
+	mixedTapeApp.loadAPI();
+	//onYouTubePlayerAPIReady();
+
+};
+
+mixedTapeApp.loadAPI = function(){
+	var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/player_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  console.log('API is loading');
+
+  
+};
+  // Load the IFrame Player API code asynchronously.
+  
+var player;
+  function onYouTubePlayerAPIReady() {
+    player = new YT.Player('ytplayer', {
+      height: '390',
+      width: '640',
+      videoId: 'M7lc1UVf-VE',
+      playerVars:{
+      	controls:0
+      }
+
+    });
+    console.log('outputting!');
+  }
+
+
+
+  // Replace the 'ytplayer' element with an <iframe> and
+  // YouTube player after the API code downloads.
+  $(function(){
+  	mixedTapeApp.playerLoad();
+
+  });
+  
+
+
+    </script>
+  </body>
+</html>
