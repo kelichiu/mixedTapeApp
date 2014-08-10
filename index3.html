@@ -3,32 +3,47 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Reenie+Beanie|Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
+	<script src="SVGinject.js"></script>
 </head>
 <body>
-<p>playlistId 1:PLfDddGUvO_MU07D0qjHejgNogxO2iPYCa</p>
-<p>playlistId 2:PLoUZqmCTYNyXJnGX2Lebb4rS30GgyKgGY</p>
-	<h1>Someone just made a mixed tape for you</h1>
-	<h2 id="title"></h2>
-	<h3 id="date_time"></h3>
-	<h3 id="description"></h3>
-	<form action="">
-		<input id="playlistId" type="text">
-		<input id="submit" type="submit" value="Submit">
-	</form>
 
-	<button id='bt_play'>Play</button>
-	<button id='bt_pause'>Pause</button>
-	<button id='bt_stop'>Stop</button>
-	
+	<div class="container">
+		
+			<header>
+			<h1 class="head"><span id="someone">Someone</span> just made a mixed tape for you</h1>
+			<form action="">
+				<input id="playlistId" type="text">
+				<input id="submit" type="submit" value="Submit">
+			</form>
+			</header>
+				<div class="cassette">
+					<div class="svg-cassette"></div>
+						<div id="ytplayer"></div>
+						<h2 id="title"></h2>
+						<h3 id="date_time"></h3>
+						<h3 id="description"></h3>
+						<div class="control">
+							<button class="play" id='bt_play'>Play</button>
+							<button class="pause" id='bt_pause'>Pause</button>
+							<button class="stop" id='bt_stop'>Stop</button>
+							<a id="toggle" href="">songs for you</a>
+					</div><!-- control -->
+					<div class="filler"></div>
+					<div id="thumbnails"></div>
+					
+				</div><!-- cassette -->
 
-
-	<div id="ytplayer"></div>
-	<div id="thumbnails"></div>
+			
+			
+	</div><!-- container -->
 	
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="mixedTape3.js"></script>
 	<script src="player.js"></script>
+	<script src="svgAnimation.js"></script>
 	
 </body>
 </html>

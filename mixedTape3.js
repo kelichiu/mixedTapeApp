@@ -80,9 +80,9 @@ mixedTapeApp.getPlaylistItems = function(playlistId){
 //Display thumbnails and titles on HTML
 mixedTapeApp.displayThumb = function(result){
 	$.each(result,function(i, thumb){
-		var title = $('<h2>').text(thumb.snippet.title);
 		var image = $('<img>').attr('src', thumb.snippet.thumbnails.default.url);
-		var thumbList = $('<div>').addClass('thumbnail').append(title, image);
+		var title = $('<h4>').text(thumb.snippet.title);
+		var thumbList = $('<div>').addClass('thumbnail').append(image,title);
 		$('#thumbnails').append(thumbList);
 		})
 	};
