@@ -4,7 +4,7 @@
   tag.src = "https://www.youtube.com/player_api";
   var firstScriptTag = document.getElementsByTagName('script')[0];
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-  console.log('Plater API is loading');
+  console.log('Player API is loading');
   };
 
 // Replace the 'ytplayer' element with an <iframe> and
