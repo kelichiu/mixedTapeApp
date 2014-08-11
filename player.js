@@ -41,7 +41,7 @@
       e.preventDefault();
     $('#thumbnails').slideToggle('slow')
     if ($("#thumbnails").is(':visible')) {
-     $("html, body").animate({scrollTop: $("#thumbnails").offset().top});
+     $("html, body").animate({scrollTop: $("#scrollHere").offset().top});
         }
     });
 

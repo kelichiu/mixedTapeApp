@@ -5,16 +5,17 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link href='http://fonts.googleapis.com/css?family=Reenie+Beanie|Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=BenchNine:400,700|Economica:400,700,700italic|Wire+One|Enriqueta:400,700|Oswald:400,700,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
 	<script src="SVGinject.js"></script>
 </head>
 <body>
 
 	<div class="container">
-		
 			<header>
-			<h1 class="head"><span id="someone">Someone</span> just made a mixed tape for you</h1>
+			<h1 class="head">a mixed tape for you</h1>
 			<form action="">
-				<input id="playlistId" type="text">
+				<input id="playlistId" type="text" placeholder="YouTube playlist ID">
 				<input id="submit" type="submit" value="Submit">
 			</form>
 			</header>
@@ -25,13 +26,16 @@
 						<h3 id="date_time"></h3>
 						<h3 id="description"></h3>
 						<div class="control">
-							<button class="play" id='bt_play'>Play</button>
-							<button class="pause" id='bt_pause'>Pause</button>
-							<button class="stop" id='bt_stop'>Stop</button>
-							<a id="toggle" href="">songs for you</a>
+							<div class="svg-pause pause" id='bt_pause'></div>
+							<div class="svg-play play"  id='bt_play'></div>
+							<div class="svg-stop stop" id='bt_stop'></div>
+							
 					</div><!-- control -->
+					<a id="toggle" href="#">Songs for you</a>
 					<div class="filler"></div>
-					<div id="thumbnails"></div>
+					<div id="scrollHere">
+						<div id="thumbnails"></div>
+					</div>
 					
 				</div><!-- cassette -->
 
